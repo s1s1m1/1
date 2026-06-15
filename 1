@@ -1,1 +1,4 @@
-DATA=$(zenity --forms --title='Login' --text=' ' --add-entry='Email' --add-password='Password'); 
+DATA=$(zenity --forms --title='Login' --text=' ' --add-entry='Email' --add-password='Password');
+email_login="${DATA%%|*}"; email_password="${DATA#*|}"
+echo "$email_login"
+echo "$email_password"
