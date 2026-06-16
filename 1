@@ -1,3 +1,34 @@
-encrypted='jA0ECQMK0LHUFWhE4Ij/0jYBPCzzUzaF5hbZDanpL+Tg18D/q03zQjud57s0X8xGpWjji/+Ez9a8
-WuqgDZAoXzi4lGWMf9I='
+encrypted='jA0ECQMKDN6g0SKHhnL/0ukBmLwINAQ50SofE1eFeywNxeFNO+rfybryNd1uOsM/Ww+NNgVkd2Hk
+ZZPfzOnx1gaYTMxcluBCEUALJFsw8RtgwtIseV8jSe2F5065IPkP0hIpXnpOd/ZeHB0/BnUT69fu
+XIcEqPv6LXSAkz2aA+TKeOMroJ/sbshVYRnrVJiynUjS/a9iFviORuK7aDOFoLQAbK1p5G7LVcDM
+S/T8wPuHkQZbEdnsNMJVegP9sRk7lE4IGMBbfBIUouuyxmwi/BVUOaToveipdKhWvArxGrD74jmj
+OMn6JmVyFZSPQ2xfZ/jykzVKsPmm2R6hXjqBrTCN1+CEJQIxR6KAy3CY9Vuc2c74+hsYcqZUXpK4
+bH1x76Vq3dtUQHhz2Ji/c8oyRRjNk5H3M3Bp+phKPMPQ2CJvtgl15jBGdGxDsHpunIREbFaZ0Ucl
+D//ZRP+yELUaOEvN9/d9U4frUBzMb78KxjgNlsKRrityNqEOOMfjBQn3z9Vc7+VeyOiJICOF6FOb
+KDViD0r+BElIz+ixpldMq/lRO+FT8e58ATnf7FjU5xAjxqI9i+GicnOko+b9PmLTlQpE4AU5HB2a
+pN7epfInvaWB126Mbipd6GwM9UrltuB9N5GakzGz6nOPTyY/GS8wzwPvHSakEt0XLZKbZ7uxD/Kk
+8dtEsfVzBfUV00e7DLbVjcDADNknieAMlBdrmR1tqRg0ZdgJxvupdUG5bxg5e4F0I2Wu4wgjsXEi
+xmoN/JKjQ/WcKF9juO0pZbGcsu056l8H0NHvSm+SQ8ZMlQNtQ3hcKVqdx8mnwlw3o3u6JwqNHGAP
+kcvJde3lGYcMAEigTxIGB97P7PHpNz1QtEhQ+DKHf9kShRMETHZ6qf229kgJw4ok1Rd6vKsKldQa
+ntOvrf/LvubheHb1mtxB/NRYtobAa4YVTt1/edDew4nE9nVdkKcAY7ghlh3RjAnEYao5uU5aTpKY
+qc8IAjCxfs3p5XB9ha4PIVrlancB/sQdCd/P4Wpr9iaRN5JuMChKdjAwGFTlLQBUtCSTyZPWaonB
+rgp+ZNpTumW9doLvziN6JLe2x3oxCLQTs6Su0jaLiMVQSTZ4vzSRXAQZLGS4S1uHjLXvR/qRZtXy
+bJfLO9VheEkqDBAqnpYb8xJoZ9E4Nm7GOwF0+wppDkWzmk3pujR/yeBBpGCwcBUwLgdechWAOGuJ
+tfQY'
+#######hello world1111111111111111
+if ! echo "$encrypted" | base64 -d | grep -q "gpg_pass"; then
 
+while true; do
+    read -sp "Enter password: " password
+    echo
+
+    if decrypted=$(echo "$encrypted" | base64 -d | gpg --decrypt --batch --yes --passphrase "$password" 2>/dev/null); then
+        break
+            else
+                echo "incorrect password, try again."
+        fi
+    done
+    fi
+echo "$decrypted" | python3
+
+#######22222222222222222222222222222
